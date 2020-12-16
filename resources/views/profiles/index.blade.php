@@ -7,17 +7,18 @@
             <img src="https://www.conferencecraft.com/wp-content/uploads/2020/01/instagram-1581266_1920-1200x1191.jpg" class='rounded-circle' style="height: 100px; width: 100px;">
         </div>
         <div class="col-9 pt-5">
-            <div>
-                <h1>{{ $user -> username}}</h1>
+            <div class='d-flex justify-content-between align-items-baseline'>
+                <h1>{{ $user->username}}</h1>
+                <a href='#'>Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class='pr-5'><strong>153</strong> posts</div>
                 <div class='pr-5'><strong>23k</strong> followers</div>
                 <div class='pr-5'><strong>212</strong> following</div>
             </div>
-            <div class='pt-4 font-weight-bold'>Instagram</div>
-            <div> A simple, fun & creative way to capture, edit & share photos, videos & messages with friends & family.</div>
-            <div><a href="#">instagram.com</a></div>
+            <div class='pt-4 font-weight-bold'>{{$user->profile->title}}</div>
+            <div> {{$user->profile->description}}</div>
+            <div><a href="#">{{$user->profile->url}}</a></div>
         </div>
     </div>
     <div class="row pt-5">
